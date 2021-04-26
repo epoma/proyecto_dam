@@ -24,7 +24,7 @@ estado char not null
 );
 
 
-drop table if exists `tb_hernan`;
+drop table if exists `tb_Junior`;
 create table `tb_hernan`(
 id int (8) not null primary key,
 nombre varchar(50) not null,
