@@ -30,3 +30,10 @@ id int (8) not null primary key,
 nombre varchar(50) not null,
 estado char not null
 );
+
+drop table if exists `tb_patrick`;
+create table `tb_patrick`(
+id int (8) not null primary key,
+nombre varchar(50) not null,
+estado char not null
+);
