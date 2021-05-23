@@ -9,12 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoDAM_1">
+        <activity android:name=".Asistir"></activity>
+        <activity android:name=".Asistencia_alumnos" />
+        <activity android:name=".Lista_alumnos" />
+        <activity android:name=".Reporte_de_alumnos_asistidos" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
     </application>
 
