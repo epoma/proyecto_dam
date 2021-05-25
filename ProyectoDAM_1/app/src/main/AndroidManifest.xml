@@ -13,12 +13,21 @@
         <activity android:name=".Asistencia_alumnos" />
         <activity android:name=".Lista_alumnos" />
         <activity android:name=".Reporte_de_alumnos_asistidos" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AlumnoLogeoActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+        </activity>
+        <activity android:name=".ProfesorLogeoActivity" />
+        <activity android:name=".ProfesorHorarioActivity">
+
+        </activity>
+        <activity android:name=".MainActivity">
 
 
         </activity>

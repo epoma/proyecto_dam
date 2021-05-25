@@ -1,6 +1,5 @@
 package com.example.proyectodam_1;
 
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,13 +8,12 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
 public class daoAlumno {
-
     Context C;
     Alumno a;
     ArrayList<Alumno> lista;
     SQLiteDatabase sql;
     String DB= "BDalumnos";
-    String tabla= "create table alumno(id int primary key autoincrement, alum text, nomb text, ape text, pass text)";
+    String tabla= "create table if not exists alumno(id integer primary key autoincrement, alum text, nomb text, ape text, pass text)";
 
         //para crear o abrir la base de datos
     public daoAlumno(Context C){
@@ -67,5 +65,45 @@ public class daoAlumno {
         }
         return lista;
     }
+
+
+    public int login (String a, String p) {
+        int b = 0;
+        Cursor cr = sql.rawQuery("select * from alumno", null);
+        if (cr != null && cr.moveToFirst()) {
+            do {
+                if (cr.getString(1).equals(a) && cr.getString(4).equals(p)) {
+                    b++;
+                    break;
+                }
+            } while (cr.moveToNext());
+        }
+        return b;
+    }
+
+
+    public Alumno getAlumno(String a, String p){
+        lista = selectAlumno();
+        for (Alumno al:lista) {
+            if(al.getAlumno().equals(a) && al.getPassword().equals(p)){
+                return  al;
+            }
+        }
+        return null;
+
+    }
+
+    public Alumno getAlumnobyId(int id){
+        lista = selectAlumno();
+        for (Alumno al:lista) {
+            if(al.getCodigo()==id){
+                return  al;
+            }
+        }
+        return null;
+
+    }
+
+
 
 }
