@@ -1,0 +1,35 @@
+-------------------------------------------
+ROLES DEFINIDOS
+-------------------------------------------
+Administrador | Docente | Alumno
+
+**********************************************
+Herramienta 1- PANEL DE CONTROL WEB - [Administrador]
+**********************************************
+Inicio
+	Alta de alumnos | Marcar | Reportes
+
+Reportes
+	Obtener reportes
+Alumnos
+	Lista de alumnos [CRUD]
+Usuarios
+	Listar Usuarios [CRUD]
+
+**********************************************
+Herramienta 2 - APPICACIÓN ANDROID
+**********************************************
+-------------------------------------------
+Pantallas para los alumnos
+-------------------------------------------
+*1 Pantalla LOGUEO
+*1 Pantalla Seleccionar combos Cursos|Sección|Horario
+*1 Pantalla marcar asistencia
+*1 Pantalla para sacar reportes de asistencia
+
+-------------------------------------------
+Pantallas para el profesor
+-------------------------------------------
+1 Pantalla LOGUEO
+1 Pantalla Seleccionar combos Cursos|Sección|Horario
+*1 Pantalla para sacar reportes de asistencia general
