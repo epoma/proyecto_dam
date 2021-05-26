@@ -4,11 +4,11 @@ public class Alumno {
     int codigo;
     String Nombre, Apellido, Alumno, Password;
 
-    public Alumno(){
+    public Alumno() {
 
     }
 
-    //Metodo sin codigo sin saber aûn porque
+    //Constructor  sin saber aûn porque
     public Alumno(String nombre, String apellido, String alumno, String password) {
         Nombre = nombre;
         Apellido = apellido;
@@ -17,10 +17,10 @@ public class Alumno {
     }
 
     //Metodo para validar los campos
-    public boolean isNull(){
-        if (Nombre.equals("") && Apellido.equals("") &&Alumno.equals("") &&Password.equals("")){
+    public boolean isNull() {
+        if (Nombre.equals("") && Apellido.equals("") && Alumno.equals("") && Password.equals("")) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
