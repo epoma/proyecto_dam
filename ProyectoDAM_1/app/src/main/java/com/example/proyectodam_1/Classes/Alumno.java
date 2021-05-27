@@ -1,4 +1,4 @@
-package com.example.proyectodam_1;
+package com.example.proyectodam_1.Classes;
 
 public class Alumno {
     int codigo;

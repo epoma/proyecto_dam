@@ -6,5 +6,8 @@
     <string name="bt_registrar">Registrar</string>
     <string name="nueva_cuenta">CREAR NUEVA CUENTA</string>
     <string name="boton_cancelar">CANCELAR</string>
+    <string name="registrarAlu">REGISTRA ALUMNO</string>
+    <string name="registraProfe">REGISTRA PROFESOR</string>
+    <string name="registraAdmini">REGISTRA ADMINISTRADOR</string>
 
 </resources>

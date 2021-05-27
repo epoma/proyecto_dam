@@ -1,48 +1,46 @@
-package Clases;
+package com.example.proyectodam_1.Classes;
 
-public class Profesor {
 
-    private String codigo;
-    private String nombre;
-    private String apellido;
-    private String contraseña;
+public class Administrador {
+    private int codigo;
+    private String Administrador, nombre, apellido, contraseña;
 
-    public Profesor() {
+    public Administrador() {
     }
 
-    public Profesor(String codigo, String nombre, String apellido, String contraseña) {
-        this.codigo = codigo;
+    public Administrador(String administrador, String nombre, String apellido, String contraseña) {
+        Administrador = administrador;
         this.nombre = nombre;
         this.apellido = apellido;
         this.contraseña = contraseña;
     }
 
 
-    public boolean ValidarCampos(){
-            if(codigo.equals("") && nombre.equals("") && apellido.equals("") && contraseña.equals("")){
-                return true;
-            }else {
-                return false;
-            }
-    }
-
-
     @Override
     public String toString() {
-        return "Profesor{" +
-                "codigo='" + codigo + '\'' +
+        return "Administrador{" +
+                "codigo=" + codigo +
+                ", Administrador='" + Administrador + '\'' +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", contraseña='" + contraseña + '\'' +
                 '}';
     }
 
-    public String getCodigo(){
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
+    }
+
+    public String getAdministrador() {
+        return Administrador;
+    }
+
+    public void setAdministrador(String administrador) {
+        Administrador = administrador;
     }
 
     public String getNombre() {

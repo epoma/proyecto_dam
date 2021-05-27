@@ -1,9 +1,12 @@
-package com.example.proyectodam_1;
+package com.example.proyectodam_1.daoClass;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.example.proyectodam_1.Classes.Alumno;
+
 
 import java.util.ArrayList;
 
@@ -21,7 +24,6 @@ public class daoAlumno {
         sql = C.openOrCreateDatabase(DB, C.MODE_PRIVATE, null);
         sql.execSQL(tabla);
         a= new Alumno();
-
     }
 
     public boolean insertarAlumno(Alumno a){
@@ -65,6 +67,9 @@ public class daoAlumno {
         }
         return lista;
     }
+
+
+
 
 
     public int login (String a, String p) {

@@ -9,28 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoDAM_1">
-        <activity android:name=".Asistir"></activity>
+        <activity android:name=".AdministradorAC"></activity>
+        <activity android:name=".Asistir" />
         <activity android:name=".Asistencia_alumnos" />
         <activity android:name=".Lista_alumnos" />
         <activity android:name=".Reporte_de_alumnos_asistidos" />
-        <activity android:name=".AlumnoLogeoActivity" >
-
+        <activity android:name=".AlumnoLogeoActivity" />
+        <activity android:name=".ProfesorLogeoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
-        <activity android:name=".ProfesorLogeoActivity" />
-        <activity android:name=".ProfesorHorarioActivity">
-
-        </activity>
-        <activity android:name=".MainActivity">
-
-
-        </activity>
+        <activity android:name=".ProfesorHorarioActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
