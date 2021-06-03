@@ -11,7 +11,6 @@ import android.widget.Toast;
 import com.example.proyectodam_1.daoClass.daoAlumno;
 import com.example.proyectodam_1.Classes.Alumno;
 
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button Registrar, Cancelar;
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Registrar = findViewById(R.id.btn_registrar);
         Cancelar = findViewById(R.id.btn_Cancelar);
 
-       dao= new daoAlumno(this);
+        dao= new daoAlumno(this);
 
         Cancelar.setOnClickListener(this);
         Registrar.setOnClickListener(this);

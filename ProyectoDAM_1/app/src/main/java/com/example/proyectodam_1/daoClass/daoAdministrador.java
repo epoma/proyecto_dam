@@ -79,7 +79,9 @@ public class daoAdministrador {
         Cursor cr = sql.rawQuery("select admins, contra from administrador", null);
         if (cr != null && cr.moveToFirst()) {
             do {
-                if (cr.getString(1).equals(admin) && cr.getString(4).equals(pass)) {
+                String nombreAdmin = cr.getString(0);
+                String contrasenia = cr.getString(1);
+                if (cr.getString(0).equals(admin) && cr.getString(1).equals(pass)) {
                     b++;
                     break;
                 }
@@ -97,7 +99,6 @@ public class daoAdministrador {
             }
         }
         return null;
-
     }
 
     public Administrador getAdminbyId(int id){

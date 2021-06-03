@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pantalla_Principal">
+
+    <Button
+        android:id="@+id/bp_Alumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="@string/b_p_alumno"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/bp_profesor"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/bp_profesor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bp_profesor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="@string/b_p_profesor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/bp_administrador"
+        app:layout_constraintStart_toStartOf="@+id/bp_administrador"
+        app:layout_constraintTop_toBottomOf="@+id/bp_Alumno" />
+
+    <Button
+        android:id="@+id/bp_administrador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text="@string/b_p_administrador"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/bp_profesor" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bp_administrador"
+        app:layout_constraintVertical_bias="0.036"
+        app:srcCompat="@drawable/rb35dd218be3445410ec3e170dace3a81" />
+</androidx.constraintlayout.widget.ConstraintLayout>

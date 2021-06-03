@@ -74,10 +74,10 @@ public class daoAlumno {
 
     public int login (String a, String p) {
         int b = 0;
-        Cursor cr = sql.rawQuery("select * from alumno", null);
+        Cursor cr = sql.rawQuery("select alum, pass from alumno", null);
         if (cr != null && cr.moveToFirst()) {
             do {
-                if (cr.getString(1).equals(a) && cr.getString(4).equals(p)) {
+                if (cr.getString(0).equals(a) && cr.getString(1).equals(p)) {
                     b++;
                     break;
                 }

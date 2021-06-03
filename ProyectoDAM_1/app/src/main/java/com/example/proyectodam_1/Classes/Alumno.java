@@ -3,7 +3,6 @@ package com.example.proyectodam_1.Classes;
 public class Alumno {
     int codigo;
     String Nombre, Apellido, Alumno, Password;
-
     public Alumno() {
 
     }

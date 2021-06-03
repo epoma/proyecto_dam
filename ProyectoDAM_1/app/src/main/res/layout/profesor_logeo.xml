@@ -24,7 +24,7 @@
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_pingresar"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Aingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/bt_pingresar"
+        android:id="@+id/bt_Aingresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"

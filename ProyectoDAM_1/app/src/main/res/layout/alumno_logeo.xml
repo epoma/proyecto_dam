@@ -22,23 +22,24 @@
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_pingresar"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Aingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_pcodigo"
         app:layout_constraintVertical_bias="0.311" />
 
     <Button
-        android:id="@+id/bt_pingresar"
+        android:id="@+id/bt_Aingresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="244dp"
         android:layout_marginEnd="48dp"
         android:text="@string/bt_ingresar"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,12 +60,27 @@
         android:layout_marginTop="108dp"
         android:ems="10"
         android:hint="@string/txt_codigo"
-        android:inputType="number"
+        android:inputType="textPersonName"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_pcontraseña"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt_pcontraseña"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_Aregresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/b_a_cancelar"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toEndOf="@+id/bt_Aingresar"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pcontraseña"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -80,7 +80,7 @@ public class daoProfesor {
         Cursor cr = sql.rawQuery("Select prof, nomb from profesor", null);
         if (cr != null && cr.moveToFirst()) {
             do {
-                if (cr.getString(1).equals(teacher) && cr.getString(4).equals(password)) {
+                if (cr.getString(0).equals(teacher) && cr.getString(1).equals(password)) {
                     l++;
                     break;
                 }

@@ -2,12 +2,16 @@
     <string name="app_name">Proyecto DAM_1</string>
     <string name="txt_contraseña">Ingrese su contraseña</string>
     <string name="txt_codigo">Ingrese su código</string>
-    <string name="bt_ingresar">Ingresar</string>
+    <string name="bt_ingresar">INGRESAR</string>
     <string name="bt_registrar">Registrar</string>
     <string name="nueva_cuenta">CREAR NUEVA CUENTA</string>
     <string name="boton_cancelar">CANCELAR</string>
     <string name="registrarAlu">REGISTRA ALUMNO</string>
     <string name="registraProfe">REGISTRA PROFESOR</string>
     <string name="registraAdmini">REGISTRA ADMINISTRADOR</string>
+    <string name="b_p_alumno">ALUMNO INGRESO</string>
+    <string name="b_p_profesor">PROFESOR INGRESO</string>
+    <string name="b_p_administrador">ADMIN INGRESO</string>
+    <string name="b_a_cancelar">REGRESAR</string>
 
 </resources>

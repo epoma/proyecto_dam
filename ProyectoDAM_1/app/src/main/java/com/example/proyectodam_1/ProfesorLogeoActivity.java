@@ -2,7 +2,6 @@ package com.example.proyectodam_1;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +15,7 @@ import com.example.proyectodam_1.daoClass.daoProfesor;
 public class ProfesorLogeoActivity extends AppCompatActivity {
 
     private EditText et_codigo, et_password;
-    private Button  b_entrar;
+    private Button b_entrar;
     daoProfesor dao;
 
 
@@ -27,7 +26,7 @@ public class ProfesorLogeoActivity extends AppCompatActivity {
 
         et_codigo= findViewById(R.id.txt_pcodigo);
         et_password= findViewById(R.id.txt_pcontraseña);
-        b_entrar=findViewById(R.id.bt_pingresar);
+        b_entrar=findViewById(R.id.bt_Aingresar);
 
         dao= new daoProfesor(this);
 
