@@ -1,4 +1,4 @@
-# proyecto_dam_1
+# Proyecto_DAM_1
 
 Proyecto desarrollo de aplicaciones móviles 1
 
