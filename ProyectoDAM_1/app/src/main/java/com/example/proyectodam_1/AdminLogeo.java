@@ -7,10 +7,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.proyectodam_1.Classes.Administrador;
 import com.example.proyectodam_1.daoClass.daoAdministrador;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class AdminLogeo extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,6 +31,7 @@ public class AdminLogeo extends AppCompatActivity implements View.OnClickListene
 
         daoAdmin= new daoAdministrador(this);
 
+
         bt_ingreso.setOnClickListener(this);
         bt_regreso.setOnClickListener(this);
 
@@ -42,6 +43,7 @@ public class AdminLogeo extends AppCompatActivity implements View.OnClickListene
         case R.id.bt_Ad_Ingreso:
             String ID = codigo.getText().toString();
             String PASS= contraseña.getText().toString();
+
               if(ID.equals(" ") || PASS.equals(" ")){
                   Toast.makeText(this, "Error: Llena todos los campos", Toast.LENGTH_SHORT).show();
               } else if(daoAdmin.loginAdmin(ID, PASS)==1){
@@ -57,6 +59,11 @@ public class AdminLogeo extends AppCompatActivity implements View.OnClickListene
                break;
 
      }
+    }
+
+
+    @Override
+    public void onBackPressed() {
     }
 
 }

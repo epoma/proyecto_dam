@@ -22,14 +22,14 @@
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_Aingresar"
+        app:layout_constraintBottom_toTopOf="@+id/bt_p_ingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_pcodigo"
         app:layout_constraintVertical_bias="0.311" />
 
     <Button
-        android:id="@+id/bt_Aingresar"
+        android:id="@+id/bt_p_ingresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -78,9 +78,22 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
-        app:layout_constraintStart_toEndOf="@+id/bt_Aingresar"
+        app:layout_constraintStart_toEndOf="@+id/bt_p_ingresar"
         app:layout_constraintTop_toBottomOf="@+id/txt_pcontraseña"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="@string/TV_Al_Logueo"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_pcodigo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

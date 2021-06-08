@@ -2,8 +2,8 @@ package com.example.proyectodam_1.Classes;
 
 public class Profesor {
 
-    private int Codigo;
-    private String Profesor;
+    private int Codigo, Edad, Celular;
+    private String Profesor, Direccion, Estado;
     private String Nombre;
     private String Apellido;
     private String Contraseña;

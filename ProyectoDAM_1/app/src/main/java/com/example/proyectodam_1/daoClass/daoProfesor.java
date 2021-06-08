@@ -77,9 +77,11 @@ public class daoProfesor {
 
     public int Login(String teacher, String password) {
         int l = 0;
-        Cursor cr = sql.rawQuery("Select prof, nomb from profesor", null);
+        Cursor cr = sql.rawQuery("Select prof, contra from profesor", null);
         if (cr != null && cr.moveToFirst()) {
             do {
+                String prof =cr.getString(0);
+                String passd = cr.getString(1);
                 if (cr.getString(0).equals(teacher) && cr.getString(1).equals(password)) {
                     l++;
                     break;

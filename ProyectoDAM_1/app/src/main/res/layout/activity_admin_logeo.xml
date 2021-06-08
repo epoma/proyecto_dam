@@ -20,11 +20,11 @@
         android:id="@+id/txt_ad_codigo"
         android:layout_width="335dp"
         android:layout_height="46dp"
+        android:layout_marginTop="112dp"
         android:ems="10"
         android:hint="@string/txt_codigo"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_ad_contraseña"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,7 +39,6 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/bt_Ad_return"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_ad_codigo" />
 
@@ -65,5 +64,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_ad_contraseña"
         app:layout_constraintVertical_bias="0.503" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/TV_Admin_Logueo"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_ad_codigo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

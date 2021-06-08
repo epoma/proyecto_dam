@@ -26,7 +26,6 @@ public class Pantalla_Principal extends AppCompatActivity implements View.OnClic
         boton_profesor.setOnClickListener(this);
         boton_admin.setOnClickListener(this);
 
-
     }
 
     @Override

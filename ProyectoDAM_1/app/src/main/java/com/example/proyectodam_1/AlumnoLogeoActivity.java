@@ -25,7 +25,7 @@ public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnCli
 
         et_codigo = findViewById(R.id.txt_pcodigo);
         et_contrasena = findViewById(R.id.txt_pcontraseña);
-        bt_ingresar = findViewById(R.id.bt_Aingresar);
+        bt_ingresar = findViewById(R.id.bt_p_ingresar);
         bt_regresar = findViewById(R.id.bt_Aregresar);
 
         dao = new daoAlumno(this);
@@ -37,7 +37,7 @@ public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View vista) {
         switch (vista.getId()){
-            case R.id.bt_Aingresar:
+            case R.id.bt_p_ingresar:
                 Logeo(vista);
                 break;
             case R.id.bt_Aregresar:
@@ -54,8 +54,8 @@ public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnCli
         } else if (dao.login(alum, contraseña)==1){
               Alumno alumno = dao.getAlumno(alum, contraseña);
               Toast.makeText(this, "Datos Correctos", Toast.LENGTH_SHORT).show();
-              Intent intent = new Intent(this, AlumnoHorarioActivity.class);
-             // intent.putExtra("alum", alumno.getAlumno());
+              Intent intent = new Intent(AlumnoLogeoActivity.this, AlumnoHorarioActivity.class);
+              //intent.putExtra("alum", alumno.getAlumno());
               startActivity(intent);
           }
 
@@ -66,6 +66,10 @@ public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnCli
         startActivity(intent2);
     }
 
+
+    @Override
+    public void onBackPressed() {
+    }
 
 }
 

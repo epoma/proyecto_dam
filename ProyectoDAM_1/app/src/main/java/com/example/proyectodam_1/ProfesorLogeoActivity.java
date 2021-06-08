@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,12 +13,11 @@ import com.example.proyectodam_1.Classes.Profesor;
 import com.example.proyectodam_1.daoClass.daoProfesor;
 
 
-public class ProfesorLogeoActivity extends AppCompatActivity {
+public class ProfesorLogeoActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText et_codigo, et_password;
-    private Button b_entrar;
+    private Button b_entrar, b_regresar;
     daoProfesor dao;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,37 +26,44 @@ public class ProfesorLogeoActivity extends AppCompatActivity {
 
         et_codigo= findViewById(R.id.txt_pcodigo);
         et_password= findViewById(R.id.txt_pcontraseña);
-        b_entrar=findViewById(R.id.bt_Aingresar);
+        b_entrar=findViewById(R.id.bt_p_ingresar);
+        b_regresar= findViewById(R.id.bt_p_regresar);
 
         dao= new daoProfesor(this);
 
-        b_entrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String teacher = et_codigo.getText().toString();
-                String pass = et_password.getText().toString();
-
-                if(teacher.equals("")&& pass.equals("")){
-                    Toast.makeText(ProfesorLogeoActivity.this, "Error: Campos vacios", Toast.LENGTH_SHORT).show();
-                }else if (dao.Login(teacher,pass)==1){
-                    Profesor pro = dao.getprofesor(teacher,pass);
-                    Toast.makeText(ProfesorLogeoActivity.this, "Datos correctos", Toast.LENGTH_SHORT).show();
-                    Intent intent2 = new Intent(ProfesorLogeoActivity.this, ProfesorHorarioActivity.class);
-                    intent2.putExtra("alum", pro.getProfesor());
-                    startActivity(intent2);
-                }
-
-
-            }
-        });
-
-
-
-
+        b_entrar.setOnClickListener(this);
+        b_regresar.setOnClickListener(this);
 
 
         }
 
+    @Override
+    public void onClick(View vista) {
+        switch (vista.getId()){
+            case R.id.bt_p_ingresar:
+                String teacher = et_codigo.getText().toString();
+                String contraseina= et_password.getText().toString();
+
+                if(teacher.equals(" ") || contraseina.equals(" ")){
+                    Toast.makeText(this, "Error: Completa los campos", Toast.LENGTH_SHORT).show();
+                }else if (dao.Login(teacher, contraseina)==1){
+                     Profesor profesor = dao.getprofesor(teacher, contraseina);
+                     Toast.makeText(this, "Datos Correctos", Toast.LENGTH_SHORT).show();
+                     Intent intent = new Intent(ProfesorLogeoActivity.this, ProfesorHorarioActivity.class);
+                     startActivity(intent);
+                }
+                break;
+            case R.id.bt_p_regresar:
+                Intent intent1 = new Intent(ProfesorLogeoActivity.this, Pantalla_Principal.class);
+                startActivity(intent1);
+                break;
+        }
+
+    }
+
+    @Override
+    public void onBackPressed() {
+    }
 
     }
 

@@ -22,6 +22,17 @@ public class tb_Carrera {
                 '}';
     }
 
+
+
+    public boolean EstaVacio(){
+        if (Descripcion.equals(" ") && Estado.equals("")){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
     public int getCodigo() {
         return Codigo;
     }
