@@ -11,7 +11,7 @@
     tools:context=".AlumnoLogeoActivity">
 
     <EditText
-        android:id="@+id/txt_contraseña"
+        android:id="@+id/txt_pcontraseña"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -22,23 +22,24 @@
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_ingresar"
+        app:layout_constraintBottom_toTopOf="@+id/bt_p_ingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_codigo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pcodigo"
         app:layout_constraintVertical_bias="0.311" />
 
     <Button
-        android:id="@+id/bt_ingresar"
+        android:id="@+id/bt_p_ingresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="244dp"
         android:layout_marginEnd="48dp"
         android:text="@string/bt_ingresar"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintHorizontal_bias="0.063"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,30 +54,46 @@
         app:srcCompat="@drawable/rb35dd218be3445410ec3e170dace3a81" />
 
     <EditText
-        android:id="@+id/txt_codigo"
+        android:id="@+id/txt_pcodigo"
         android:layout_width="335dp"
         android:layout_height="46dp"
         android:layout_marginTop="108dp"
         android:ems="10"
         android:hint="@string/txt_codigo"
-        android:inputType="number"
+        android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/txt_contraseña"
+        app:layout_constraintEnd_toEndOf="@+id/txt_pcontraseña"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txt_contraseña"
+        app:layout_constraintStart_toStartOf="@+id/txt_pcontraseña"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_registrar"
+        android:id="@+id/bt_Aregresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="280dp"
-        android:text="@string/bt_registrar"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/b_a_cancelar"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
-        app:layout_constraintStart_toEndOf="@+id/bt_ingresar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toEndOf="@+id/bt_p_ingresar"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pcontraseña"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="@string/TV_Al_Logueo"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_pcodigo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

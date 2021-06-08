@@ -1,22 +1,21 @@
 package com.example.proyectodam_1;
 
 import android.content.Intent;
-import android.icu.number.IntegerWidth;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.proyectodam_1.Classes.Alumno;
+import com.example.proyectodam_1.daoClass.daoAlumno;
 
 public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText et_codigo, et_contraseña;
-    private Button bt_ingresar, bt_registrar;
+    private EditText et_codigo, et_contrasena;
+    private Button bt_ingresar, bt_regresar;
     daoAlumno dao;
 
     @Override
@@ -24,39 +23,55 @@ public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alumno_logeo);
 
-    et_codigo=findViewById(R.id.txt_codigo);
-    et_contraseña=findViewById(R.id.txt_contraseña);
-    bt_ingresar=findViewById(R.id.bt_ingresar);
-    bt_registrar=findViewById(R.id.bt_registrar);
+        et_codigo = findViewById(R.id.txt_pcodigo);
+        et_contrasena = findViewById(R.id.txt_pcontraseña);
+        bt_ingresar = findViewById(R.id.bt_p_ingresar);
+        bt_regresar = findViewById(R.id.bt_Aregresar);
 
-    bt_ingresar.setOnClickListener(this);
-    bt_registrar.setOnClickListener(this);
+        dao = new daoAlumno(this);
 
-    dao= new daoAlumno(this);
-
+        bt_ingresar.setOnClickListener(this);
+        bt_regresar.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.bt_ingresar:
-                Log.d("A", "onClick: Entrando a la funcion");
-                String alumo = et_codigo.getText().toString();
-                String contra = et_contraseña.getText().toString();
-                if(alumo.equals("")&& contra.equals("")){
-                    Toast.makeText(this, "Error: Campos vacios", Toast.LENGTH_SHORT).show();
-                }else if (dao.login(alumo,contra)==1){
-                    Alumno Al = dao.getAlumno(alumo,contra);
-                    Toast.makeText(this, "Datos correctos", Toast.LENGTH_SHORT).show();
-                    Intent intent2 = new Intent(AlumnoLogeoActivity.this, ProfesorHorarioActivity.class);
-                    intent2.putExtra("alum", Al.getAlumno());
-                    startActivity(intent2);
-                }
+    public void onClick(View vista) {
+        switch (vista.getId()){
+            case R.id.bt_p_ingresar:
+                Logeo(vista);
                 break;
-            case R.id.bt_registrar:
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
+            case R.id.bt_Aregresar:
+                Regresar(vista);
                 break;
         }
     }
+
+    public void  Logeo(View vista){
+        String alum= et_codigo.getText().toString();
+        String contraseña = et_contrasena.getText().toString();
+          if(alum.equals("") || contraseña.equals("")){
+            Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show();
+        } else if (dao.login(alum, contraseña)==1){
+              Alumno alumno = dao.getAlumno(alum, contraseña);
+              Toast.makeText(this, "Datos Correctos", Toast.LENGTH_SHORT).show();
+              Intent intent = new Intent(AlumnoLogeoActivity.this, AlumnoHorarioActivity.class);
+              //intent.putExtra("alum", alumno.getAlumno());
+              startActivity(intent);
+          }
+
+    }
+
+    public void Regresar(View vista){
+        Intent intent2= new Intent(this, Pantalla_Principal.class);
+        startActivity(intent2);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+    }
+
 }
+
+
+

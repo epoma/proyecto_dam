@@ -1,10 +1,46 @@
 <resources>
     <string name="app_name">Proyecto DAM_1</string>
-    <string name="txt_contraseña">Ingrese su contraseña</string>
-    <string name="txt_codigo">Ingrese su código</string>
-    <string name="bt_ingresar">Ingresar</string>
+    <string name="txt_contraseña">Ingrese contraseña</string>
+    <string name="direccion">Ingrese dirección</string>
+    <string name="Celular">Ingrese celular</string>
+    <string name="CodCarrera">Elija la carrera</string>
+    <string name="Edad">Ingrese edad</string>
+    <string name="txt_codigo">Ingrese su codigo</string>
+
+    <string name="bt_ingresar">INGRESAR</string>
     <string name="bt_registrar">Registrar</string>
-    <string name="nueva_cuenta">CREAR NUEVA CUENTA</string>
+
+    <string name="nueva_cuenta">REGISTRO DE ALUMNO</string>
+
     <string name="boton_cancelar">CANCELAR</string>
+    <string name="registrarAlu">REGISTRA ALUMNO</string>
+    <string name="registraProfe">REGISTRA PROFESOR</string>
+    <string name="registraAdmini">REGISTRA ADMINISTRADOR</string>
+    <string name="b_p_alumno">ALUMNO INGRESO</string>
+    <string name="b_p_profesor">PROFESOR INGRESO</string>
+    <string name="b_p_administrador">ADMIN INGRESO</string>
+    <string name="b_a_cancelar">REGRESAR</string>
+    <string name="TV_Al_Logueo">ALUMNO LOGUEO</string>
+    <string name="TV_Pro_Logueo">PROFESOR LOGUEO</string>
+    <string name="TV_Admin_Logueo">ADMIN LOGUEO</string>
+
+
+    <string-array name="comboEstado">
+        <item>ACTIVO</item>
+        <item>INACTIVO</item>
+        <item>RETIRADO</item>
+        <item>SUSPENDIDO</item>
+    </string-array>
+
+
+    <string-array name="combocodCarrera">
+        <item>Computacion e informatica</item>
+        <item>Contabilidad</item>
+        <item>Seguridad Industrial</item>
+        <item>Maniquiure</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
