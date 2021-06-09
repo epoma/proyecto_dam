@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.proyectodam_1.daoClass.IniciadorBd;
+
 public class Pantalla_Principal extends AppCompatActivity implements View.OnClickListener {
 
 
@@ -26,6 +28,8 @@ public class Pantalla_Principal extends AppCompatActivity implements View.OnClic
         boton_profesor.setOnClickListener(this);
         boton_admin.setOnClickListener(this);
 
+
+        IniciadorBd.crearDB(this);
     }
 
     @Override
