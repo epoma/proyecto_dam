@@ -16,14 +16,10 @@ public class daoProfesor {
     ArrayList<Profesor> lista;
     SQLiteDatabase sql;
     String BD = "BDalumnos";
-    String tablap = "create table if not exists profesor(id integer primary key autoincrement," +
-            "prof text, nomb text, apell text, contra text)";
-
 
     public daoProfesor(Context C) {
         this.C = C;
         sql = C.openOrCreateDatabase(BD, C.MODE_PRIVATE, null);
-        sql.execSQL(tablap);
         profesorclase = new Profesor();
 
     }

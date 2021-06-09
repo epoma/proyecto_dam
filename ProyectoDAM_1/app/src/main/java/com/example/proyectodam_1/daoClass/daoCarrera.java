@@ -16,15 +16,12 @@ public class daoCarrera {
     ArrayList<tb_Carrera> listaCarrera;
     SQLiteDatabase sql;
     String BD= "BDalumnos";
-    String tabla="create table if not exists carrera(codigo integer primary key autoincrement" +
-            ", nombCarrera text" +
-            ", estado text)";
+
 
 
     public daoCarrera(Context c){
         this.C=c;
         sql = c.openOrCreateDatabase(BD, c.MODE_PRIVATE, null);
-        sql.execSQL(tabla);
         Race = new tb_Carrera();
 
     }

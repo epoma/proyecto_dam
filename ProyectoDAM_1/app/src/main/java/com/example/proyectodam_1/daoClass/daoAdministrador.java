@@ -17,16 +17,12 @@ public class daoAdministrador {
     ArrayList<Administrador> lista;
     SQLiteDatabase sql;
     String BD = "BDalumnos";
-    String tablaAdmin = "create table if not exists administrador(id integer primary key autoincrement," +
-            "admins text, nomb text, apell text, contra text)";
 
 
     public daoAdministrador(Context C) {
         this.C = C;
         sql = C.openOrCreateDatabase(BD, C.MODE_PRIVATE, null);
-        sql.execSQL(tablaAdmin);
         Administradorclase = new Administrador();
-
     }
 
 
