@@ -2,8 +2,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@android:color/holo_green_light"
     android:layout_height="match_parent"
-    tools:context=".Fragment_Admin_teacher">
+    tools:context=".Fragment_Admin_teacher"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
