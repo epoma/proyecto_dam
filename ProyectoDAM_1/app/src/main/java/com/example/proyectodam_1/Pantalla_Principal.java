@@ -2,12 +2,18 @@ package com.example.proyectodam_1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import com.example.proyectodam_1.daoClass.IniciadorBd;
+import com.example.proyectodam_1.room.RoomBDAlumnos;
+import com.example.proyectodam_1.room.entidades.Alumno;
+
+import java.util.List;
 
 public class Pantalla_Principal extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,6 +36,7 @@ public class Pantalla_Principal extends AppCompatActivity implements View.OnClic
 
 
         IniciadorBd.crearDB(this);
+
     }
 
     @Override

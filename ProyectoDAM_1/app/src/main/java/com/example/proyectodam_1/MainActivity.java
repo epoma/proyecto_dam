@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.proyectodam_1.Classes.Alumno;
 import com.example.proyectodam_1.daoClass.daoAlumno;
 import com.example.proyectodam_1.daoClass.daoCarrera;
+import com.example.proyectodam_1.room.RoomBDAlumnos;
 
 import java.util.ArrayList;
 
@@ -92,24 +93,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_registrar:
-                Alumno a = new Alumno();
-                a.setAlumno(Alumno.getText().toString());
-                a.setNombre(Nombre.getText().toString());
-                a.setApellido(Apellido.getText().toString());
-                a.setPassword(Contrase.getText().toString());
-                a.setEstado(estado.getItemAtPosition(estado.getSelectedItemPosition()).toString());
-                a.setEdad(Integer.parseInt(Edad.getText().toString()));
-                a.setCelular(Integer.parseInt(Celular.getText().toString()));
-                a.setCodcarrera(carrera.getSelectedItemPosition());
-                a.setDireccion(Direccion.getText().toString());
-                if (a.isNull()) {
-                    Toast.makeText(this, "Error: Llena todos los campos", Toast.LENGTH_LONG).show();
-                }else if (dao.insertarAlumno(a)){
+//                Alumno a = new Alumno();
+//                a.setAlumno(Alumno.getText().toString());
+//                a.setNombre(Nombre.getText().toString());
+//                a.setApellido(Apellido.getText().toString());
+//                a.setPassword(Contrase.getText().toString());
+//                a.setEstado(estado.getItemAtPosition(estado.getSelectedItemPosition()).toString());
+//                a.setEdad(Integer.parseInt(Edad.getText().toString()));
+//                a.setCelular(Integer.parseInt(Celular.getText().toString()));
+//                a.setCodcarrera(carrera.getSelectedItemPosition());
+//                a.setDireccion(Direccion.getText().toString());
+
+                com.example.proyectodam_1.room.entidades.Alumno entidad = new com.example.proyectodam_1.room.entidades.Alumno();
+                entidad.alumno = Alumno.getText().toString();
+                entidad.nombre = Nombre.getText().toString();
+                entidad.apellido = Apellido.getText().toString();
+                entidad.password = Contrase.getText().toString();
+                entidad.estado = estado.getItemAtPosition(estado.getSelectedItemPosition()).toString();
+                entidad.edad = Integer.parseInt(Edad.getText().toString());
+                entidad.celular = Celular.getText().toString();
+                entidad.codcarrera = carrera.getSelectedItemPosition();
+                entidad.direccion = Direccion.getText().toString();
+
+//                if (a.isNull()) {
+//                    Toast.makeText(this, "Error: Llena todos los campos", Toast.LENGTH_LONG).show();
+//                }else if (dao.insertarAlumno(a)){
+//                    Toast.makeText(this, "Alumno Registrado", Toast.LENGTH_SHORT).show();
+//                    Intent intent2 = new Intent(MainActivity.this, AlumnoLogeoActivity.class);
+//                    startActivity(intent2);
+//                    finish();
+//               }else{
+//                    Toast.makeText(this, "Alumno ya Registrado!!!", Toast.LENGTH_SHORT).show();
+//                }
+
+                if (RoomBDAlumnos.getDB(getApplicationContext()).alumnoDao().agregarAlumnos(entidad) != 0){
                     Toast.makeText(this, "Alumno Registrado", Toast.LENGTH_SHORT).show();
                     Intent intent2 = new Intent(MainActivity.this, AlumnoLogeoActivity.class);
                     startActivity(intent2);
                     finish();
-               }else{
+                }else{
                     Toast.makeText(this, "Alumno ya Registrado!!!", Toast.LENGTH_SHORT).show();
                 }
                 break;

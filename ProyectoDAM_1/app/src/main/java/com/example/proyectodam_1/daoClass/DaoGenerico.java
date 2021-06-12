@@ -66,13 +66,17 @@ public abstract class DaoGenerico<T> {
         return x;
     }
 
-    protected int entidadExiste(Map<String, Object> filtros) {
+    protected boolean entidadExiste(Map<String, Object> filtros) {
 
         String clausulaWhere = "";
 
-        int existe = 0;
+        boolean existe = false;
         Cursor cr=sql.rawQuery("select * from " + nombreTabla + " where ", null);
         return  existe;
+    }
+
+    protected boolean entidadExiste(T entidad) {
+        return false;
     }
 
     private String contruirWhere(Map<String, Object> filtros) {

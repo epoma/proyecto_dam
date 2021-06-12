@@ -53,7 +53,7 @@ public class daoAlumno extends DaoGenerico<Alumno> {
     }
 
     public int buscar(String a){
-           return this.buscarEntidad(a);
+           return 1;//this.buscarEntidad(a);
    }
 
 

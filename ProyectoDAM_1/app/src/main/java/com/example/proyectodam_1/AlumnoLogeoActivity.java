@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.proyectodam_1.Classes.Alumno;
 import com.example.proyectodam_1.daoClass.daoAlumno;
+import com.example.proyectodam_1.room.RoomBDAlumnos;
 
 public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -47,17 +48,35 @@ public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnCli
     }
 
     public void  Logeo(View vista){
+//        String alum= et_codigo.getText().toString();
+//        String contraseña = et_contrasena.getText().toString();
+//          if(alum.equals("") || contraseña.equals("")){
+//            Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show();
+//        } else if (dao.login(alum, contraseña)==1){
+//              Alumno alumno = dao.getAlumno(alum, contraseña);
+//              Toast.makeText(this, "Datos Correctos", Toast.LENGTH_SHORT).show();
+//              Intent intent = new Intent(AlumnoLogeoActivity.this, AlumnoHorarioActivity.class);
+//              //intent.putExtra("alum", alumno.getAlumno());
+//              startActivity(intent);
+//          }
+
         String alum= et_codigo.getText().toString();
         String contraseña = et_contrasena.getText().toString();
-          if(alum.equals("") || contraseña.equals("")){
+        if(alum.equals("") || contraseña.equals("")){
             Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show();
-        } else if (dao.login(alum, contraseña)==1){
-              Alumno alumno = dao.getAlumno(alum, contraseña);
-              Toast.makeText(this, "Datos Correctos", Toast.LENGTH_SHORT).show();
-              Intent intent = new Intent(AlumnoLogeoActivity.this, AlumnoHorarioActivity.class);
-              //intent.putExtra("alum", alumno.getAlumno());
-              startActivity(intent);
-          }
+        } else {
+            com.example.proyectodam_1.room.entidades.Alumno entidad;
+
+            entidad = RoomBDAlumnos.getDB(getApplicationContext()).alumnoDao().login(alum, contraseña);
+            if(entidad != null) {
+                //Alumno alumno = dao.getAlumno(alum, contraseña);
+                Toast.makeText(this, "Datos Correctos", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AlumnoLogeoActivity.this, AlumnoHorarioActivity.class);
+                //intent.putExtra("alum", alumno.getAlumno());
+                startActivity(intent);
+            }
+
+        }
 
     }
 
