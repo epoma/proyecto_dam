@@ -11,23 +11,44 @@ DES_CAR varchar(250) not null,
 EST_REG varchar(25) not null
 );
 
+drop table if exists `tb_clase`;
+create table `tb_clase`(
+COD_CLA int(8) not null auto_increment primary key,
+COD_SEC int(8)  not null,
+EST_REG varchar(25) not null
+);
+
+drop table if exists `tb_seccion`;
+create table `tb_seccion`(
+COD_SEC int(8)  not null auto_increment primary key,
+DES_SEC char(4) not null,
+DES_CURS varchar(50) not null,
+COD_PRO int(8) not null,
+COD_HOR int(8) not null,
+LFAL_SEC int(2) not null,
+LCLA_SEC int(2) not null,
+EST_REG varchar(25) not null
+);
+
+drop table if exists `tb_horario`;
+create table `tb_horario`(
+COD_HOR int(8) not null auto_increment primary key,
+DES_HOR datetime not null
+);
+
 drop table if exists `tb_rol`;
 create table `tb_rol`(
 COD_ROL int (8) not null auto_increment primary key,
 DES_ROL varchar(250) not null
 );
 
-drop table if exists `tb_alumno`;
-create table `tb_alumno`(
-COD_ALU int (8) not null auto_increment primary key,
-NOM_ALU varchar(150) not null,
-APE_ALU varchar(150) not null,
-USU_ALU char(10) not null,
-PASS_ALU char(16) not null,
-COD_CAR int(8) not null,
-EDAD_ALU int not null,
-CEL_ALU char(9) not null,
-DIR_ALU varchar(250) not null,
+drop table if exists `tb_administrador`;
+create table `tb_administrador`(
+COD_ADMIN int (8) not null auto_increment primary key,
+NOM_ADMIN varchar(150) not null,
+APE_ADMIN varchar(150) not null,
+USU_ADMIN char(10) not null,
+PASS_ADMIN char(16) not null,
 COD_ROL int (8)  not null,
 EST_REG varchar(25) not null
 );
@@ -46,23 +67,18 @@ COD_ROL int (8)  not null,
 EST_REG varchar(25) not null
 );
 
-drop table if exists `tb_horario`;
-create table `tb_horario`(
-COD_HOR int(8) not null auto_increment primary key,
-DES_HOR datetime not null
-);
-
-drop table if exists `tb_seccion`;
-create table `tb_seccion`(
-COD_SEC int(8)  not null auto_increment primary key,
-DES_SEC char(4) not null,
-DES_CURS varchar(50) not null,
-NOTA_1 int(2) not null,
-NOTA_2 int(2) not null,
-COD_PRO int(8) not null,
-COD_HOR int(8) not null,
-LFAL_SEC int(2) not null,
-LCLA_SEC int(2) not null,
+drop table if exists `tb_alumno`;
+create table `tb_alumno`(
+COD_ALU int (8) not null auto_increment primary key,
+NOM_ALU varchar(150) not null,
+APE_ALU varchar(150) not null,
+USU_ALU char(10) not null,
+PASS_ALU char(16) not null,
+COD_CAR int(8) not null,
+EDAD_ALU int not null,
+CEL_ALU char(9) not null,
+DIR_ALU varchar(250) not null,
+COD_ROL int (8)  not null,
 EST_REG varchar(25) not null
 );
 
@@ -73,12 +89,6 @@ COD_ALU int(8) not null,
 primary key (COD_SEC,COD_ALU)
 );
 
-drop table if exists `tb_clase`;
-create table `tb_clase`(
-COD_CLA int(8) not null auto_increment primary key,
-COD_SEC int(8)  not null,
-EST_REG varchar(25) not null
-);
 
 drop table if exists `tb_asistencia`;
 create table `tb_asistencia`(
@@ -88,30 +98,6 @@ COD_CLA int(8) not null,
 EST_REG varchar(25) not null
 );
 
-drop table if exists `tb_geolocalizacion`;
-create table `tb_geolocalizacion`(
-COD_GEO int(8)  not null auto_increment primary key,
-COR_GEO char(4) not null,
-COD_ALU int(8) not null
-);
-
-drop table if exists `tb_administrador`;
-create table `tb_administrador`(
-COD_ADMIN int (8) not null auto_increment primary key,
-NOM_ADMIN varchar(150) not null,
-APE_ADMIN varchar(150) not null,
-USU_ADMIN char(10) not null,
-PASS_ADMIN char(16) not null,
-COD_ROL int (8)  not null,
-EST_REG varchar(25) not null
-);
-
-drop table if exists `tb_QR`;
-create table `tb_QR`(
-COD_QR int(8)  not null auto_increment primary key,
-DES_QR varchar(50) not null,
-FEC_QR datetime not null
-);
 
 -------------------------------------------------------------------------------------------------------------
 /*-- ALTER CONSTRAINT --*/
