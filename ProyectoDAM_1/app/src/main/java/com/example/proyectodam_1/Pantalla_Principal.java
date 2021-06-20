@@ -20,7 +20,6 @@ public class Pantalla_Principal extends AppCompatActivity implements View.OnClic
 
     private Button boton_alumno, boton_profesor, boton_admin;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +31,11 @@ public class Pantalla_Principal extends AppCompatActivity implements View.OnClic
 
         boton_alumno.setOnClickListener(this);
         boton_profesor.setOnClickListener(this);
-        boton_admin.setOnClickListener(this);
+        boton_admin.setOnClickListener(new ManejadorEventoBtnAdmin());
 
 
         IniciadorBd.crearDB(this);
+
 
     }
 
@@ -70,6 +70,15 @@ public class Pantalla_Principal extends AppCompatActivity implements View.OnClic
     }
 
 
+
+    class ManejadorEventoBtnAdmin implements View.OnClickListener {
+
+        @Override
+        public void onClick(View view) {
+            Intent intent3 = new Intent(getApplicationContext(), AdminLogeo.class);
+            startActivity(intent3);
+        }
+    }
 
 
 }
