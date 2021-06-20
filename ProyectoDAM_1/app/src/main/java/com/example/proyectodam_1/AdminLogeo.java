@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.proyectodam_1.Classes.Administrador;
 import com.example.proyectodam_1.daoClass.daoAdministrador;
 
 public class AdminLogeo extends AppCompatActivity implements View.OnClickListener {

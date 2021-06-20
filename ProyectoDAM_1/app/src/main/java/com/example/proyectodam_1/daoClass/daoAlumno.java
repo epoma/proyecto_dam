@@ -5,8 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.proyectodam_1.Classes.Alumno;
-
 
 import java.util.ArrayList;
 

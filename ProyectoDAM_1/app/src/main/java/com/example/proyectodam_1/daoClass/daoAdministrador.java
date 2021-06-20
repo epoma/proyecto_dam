@@ -7,9 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-import com.example.proyectodam_1.Classes.Administrador;
-
-
 
 public class daoAdministrador {
     Context C;

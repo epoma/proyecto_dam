@@ -39,8 +39,20 @@
         <item>Seguridad Industrial</item>
         <item>Maniquiure</item>
     </string-array>
+
+    //Fragment profesor
+    <string name="nueva_cuenta_pro">REGISTRO DE PROFESOR</string>
+    <string name="codigo_profesor">Código profesor</string>
+    <string name="nombre_profesor">Ingrese nombre</string>
+    <string name="apellido_profesor">Ingrese apellido</string>
+
+
+
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">PRESIONA UNO DE LOS BOTONES PARA AGREGAR ALUMNO / PROFESOR</string>
 
 
 </resources>

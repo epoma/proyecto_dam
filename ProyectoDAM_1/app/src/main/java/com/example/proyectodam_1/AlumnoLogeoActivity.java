@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.proyectodam_1.Classes.Alumno;
 import com.example.proyectodam_1.daoClass.daoAlumno;
 
 public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnClickListener {
