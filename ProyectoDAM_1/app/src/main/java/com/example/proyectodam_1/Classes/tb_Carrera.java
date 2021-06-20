@@ -1,59 +1,57 @@
 package com.example.proyectodam_1.Classes;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "carrera")
 public class tb_Carrera {
-    private int Codigo;
-    private String Descripcion;
-    private String Estado;
+
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo (name = "rowidC")
+    private int codigoCarrera;
+
+    @ColumnInfo (name = "descripcion")
+    private String des_carrera;
+
+    @ColumnInfo(name = "estado")
+    private String estado_carrera;
 
     public tb_Carrera() {
-    }
-
-    public tb_Carrera(String descripcion, String estado) {
-        Descripcion = descripcion;
-        Estado = estado;
     }
 
     @Override
     public String toString() {
         return "tb_Carrera{" +
-                "Codigo=" + Codigo +
-                ", Descripcion='" + Descripcion + '\'' +
-                ", Estado='" + Estado + '\'' +
+                "codigoCarrera=" + codigoCarrera +
+                ", des_carrera='" + des_carrera + '\'' +
+                ", estado_carrera='" + estado_carrera + '\'' +
                 '}';
     }
 
-
-
-    public boolean EstaVacio(){
-        if (Descripcion.equals(" ") && Estado.equals("")){
-            return true;
-        }else{
-            return false;
-        }
+    public int getCodigoCarrera() {
+        return codigoCarrera;
     }
 
-
-    public int getCodigo() {
-        return Codigo;
+    public void setCodigoCarrera(int codigoCarrera) {
+        this.codigoCarrera = codigoCarrera;
     }
 
-    public void setCodigo(int codigo) {
-        Codigo = codigo;
+    public String getDes_carrera() {
+        return des_carrera;
     }
 
-    public String getDescripcion() {
-        return Descripcion;
+    public void setDes_carrera(String des_carrera) {
+        this.des_carrera = des_carrera;
     }
 
-    public void setDescripcion(String descripcion) {
-        Descripcion = descripcion;
+    public String getEstado_carrera() {
+        return estado_carrera;
     }
 
-    public String getEstado() {
-        return Estado;
-    }
-
-    public void setEstado(String estado) {
-        Estado = estado;
+    public void setEstado_carrera(String estado_carrera) {
+        this.estado_carrera = estado_carrera;
     }
 }

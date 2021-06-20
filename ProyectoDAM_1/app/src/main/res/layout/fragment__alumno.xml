@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Alumno">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/nueva_cuenta"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+
+            <EditText
+                android:id="@+id/txt_Nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Alumno"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/tx_nombbre_alu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/txt_Apellido_pro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Apellido"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+
+<EditText
+    android:id="@+id/txt_celu_alu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:hint="@string/Celular"
+    android:inputType="number"
+    android:textSize="16sp" />
+
+
+            <Spinner
+                android:id="@+id/sp_estado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                />
+
+<EditText
+    android:id="@+id/txt_eda_alu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:hint="@string/Edad"
+    android:inputType="textPersonName"
+    android:textSize="16sp" />
+
+
+            <Spinner
+                android:id="@+id/sp_carrera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+
+<EditText
+    android:id="@+id/txt_dire_alu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:hint="@string/direccion"
+    android:inputType="textPersonName"
+    android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/txt_contra_alu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:hint="@string/txt_contraseña"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_registrar_pro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/bt_registrar"
+                    android:textSize="14sp"
+
+                    />
+
+                <Button
+                    android:id="@+id/btn_Cancelar_pro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/boton_cancelar"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
