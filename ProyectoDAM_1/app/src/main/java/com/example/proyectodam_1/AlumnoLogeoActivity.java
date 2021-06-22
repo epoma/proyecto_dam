@@ -9,13 +9,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.proyectodam_1.daoClass.daoAlumno;
 
 public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText et_codigo, et_contrasena;
     private Button bt_ingresar, bt_regresar;
-    daoAlumno dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +25,6 @@ public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnCli
         bt_ingresar = findViewById(R.id.bt_p_ingresar);
         bt_regresar = findViewById(R.id.bt_Aregresar);
 
-        dao = new daoAlumno(this);
 
         bt_ingresar.setOnClickListener(this);
         bt_regresar.setOnClickListener(this);
@@ -50,8 +47,7 @@ public class AlumnoLogeoActivity extends AppCompatActivity implements View.OnCli
         String contraseña = et_contrasena.getText().toString();
           if(alum.equals("") || contraseña.equals("")){
             Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show();
-        } else if (dao.login(alum, contraseña)==1){
-              Alumno alumno = dao.getAlumno(alum, contraseña);
+        } else if (true){
               Toast.makeText(this, "Datos Correctos", Toast.LENGTH_SHORT).show();
               Intent intent = new Intent(AlumnoLogeoActivity.this, AlumnoHorarioActivity.class);
               //intent.putExtra("alum", alumno.getAlumno());

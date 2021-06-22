@@ -7,7 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.proyectodam_1.daoClass.IniciadorBd;
+import com.example.proyectodam_1.room.DBTronicTec;
+import com.example.proyectodam_1.room.entity.Rol;
+
 
 public class Pantalla_Principal extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,8 +30,11 @@ public class Pantalla_Principal extends AppCompatActivity implements View.OnClic
         boton_profesor.setOnClickListener(this);
         boton_admin.setOnClickListener(this);
 
-
-        IniciadorBd.crearDB(this);
+        DBTronicTec db = DBTronicTec.getInstance(getApplicationContext());
+        Rol rol = new Rol();
+        rol.descripcion = "Alumno";
+        db.getRolDao().insertRol(rol);
+        //db.getRolDao().getRoles();
     }
 
     @Override

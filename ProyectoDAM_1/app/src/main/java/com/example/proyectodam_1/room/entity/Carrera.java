@@ -11,11 +11,11 @@ public class Carrera {
     @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "codigo")
-    private int codigo;
+    public int codigo;
 
     @ColumnInfo (name = "descripcion")
-    private String descripcion;
+    public String descripcion;
 
     @ColumnInfo(name = "estado")
-    private String estado;
+    public String estado;
 }

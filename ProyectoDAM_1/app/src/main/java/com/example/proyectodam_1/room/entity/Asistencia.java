@@ -11,16 +11,16 @@ public class Asistencia {
     @NonNull
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name= "codigoAsistencia")
-    private int codigoAsistencia;
+    public int codigoAsistencia;
 
     @ColumnInfo(name="codigoUsuario")
-    private int codigoUsuario;
+    public int codigoUsuario;
 
     @ColumnInfo(name="estado")
-    private String estado;
+    public String estado;
 
     @ColumnInfo(name="codigoClase")
-    private int codigoClase;
+    public int codigoClase;
 
 
 }

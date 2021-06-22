@@ -30,7 +30,7 @@ public abstract  class DBTronicTec extends RoomDatabase {
 
     private  static DBTronicTec INSTANCE;
 
-    abstract RolDao getRolDao();
+    public abstract RolDao getRolDao();
 
 
 

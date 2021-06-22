@@ -14,8 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.proyectodam_1.daoClass.daoAlumno;
-import com.example.proyectodam_1.daoClass.daoCarrera;
+
 
 import java.util.ArrayList;
 
@@ -27,9 +26,6 @@ public class Fragment_Alumno extends Fragment implements View.OnClickListener {
     private Spinner estado, carrera;
     ArrayList<String> Estadho;
     private static Context context;
-
-    daoCarrera daoRace;
-    daoAlumno dao;
 
 
 
@@ -63,8 +59,6 @@ public class Fragment_Alumno extends Fragment implements View.OnClickListener {
 
         context= getActivity().getApplicationContext();
 
-        daoRace = new daoCarrera(context);
-        dao = new daoAlumno(context);
 
         Cancelar.setOnClickListener(this);
         Registrar.setOnClickListener(this);
