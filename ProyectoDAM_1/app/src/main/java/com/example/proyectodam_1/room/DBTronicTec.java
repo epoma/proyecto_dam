@@ -11,6 +11,7 @@ import com.example.proyectodam_1.room.dao.ClaseDao;
 import com.example.proyectodam_1.room.dao.CursoDao;
 import com.example.proyectodam_1.room.dao.RolDao;
 import com.example.proyectodam_1.room.dao.SeccionDao;
+import com.example.proyectodam_1.room.dao.UsuarioDao;
 import com.example.proyectodam_1.room.entity.Asistencia;
 import com.example.proyectodam_1.room.entity.Carrera;
 import com.example.proyectodam_1.room.entity.Clase;
@@ -29,7 +30,7 @@ import com.example.proyectodam_1.room.entity.Usuario;
             Curso.class,
             Seccion.class
         },
-        version = 1)
+        version = 6)
 public abstract  class DBTronicTec extends RoomDatabase {
 
     private  static DBTronicTec INSTANCE;
@@ -60,4 +61,5 @@ public abstract  class DBTronicTec extends RoomDatabase {
 
     public abstract ClaseDao getClaseDao();
 
+    public abstract UsuarioDao getUsuarioDao();
 }

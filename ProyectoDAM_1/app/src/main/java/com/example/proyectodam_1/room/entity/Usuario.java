@@ -13,7 +13,7 @@ public class Usuario {
     public int codigoUsuario;
 
     @ColumnInfo(name = "dni")
-    public int dni;
+    public String dni;
 
     @ColumnInfo (name = "nombre")
     public String nombre;

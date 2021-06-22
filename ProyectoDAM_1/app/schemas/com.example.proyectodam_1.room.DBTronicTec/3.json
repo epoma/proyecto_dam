@@ -1,0 +1,274 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "3245ea5a1b291117a93156899400494b",
+    "entities": [
+      {
+        "tableName": "rol",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigoRol` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `descripcion` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "codigoRol",
+            "columnName": "codigoRol",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigoRol"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "usuario",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigoUsuario` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `dni` TEXT, `nombre` TEXT, `apellido` TEXT, `contrasenia` TEXT, `codigoRol` INTEGER NOT NULL, `estado` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "codigoUsuario",
+            "columnName": "codigoUsuario",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dni",
+            "columnName": "dni",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "apellido",
+            "columnName": "apellido",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "contrasenia",
+            "columnName": "contrasenia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codigoRol",
+            "columnName": "codigoRol",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigoUsuario"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "asistencia",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigoAsistencia` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `codigoUsuario` INTEGER NOT NULL, `estado` TEXT, `codigoClase` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "codigoAsistencia",
+            "columnName": "codigoAsistencia",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codigoUsuario",
+            "columnName": "codigoUsuario",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codigoClase",
+            "columnName": "codigoClase",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigoAsistencia"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "carrera",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigo` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `descripcion` TEXT, `estado` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "codigo",
+            "columnName": "codigo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigo"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "clase",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigoClase` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `codigoProfesor` INTEGER NOT NULL, `hora` TEXT, `codigoCurso` INTEGER NOT NULL, `codigoSeccion` INTEGER NOT NULL, `estado` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "codigoClase",
+            "columnName": "codigoClase",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codigoProfesor",
+            "columnName": "codigoProfesor",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hora",
+            "columnName": "hora",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "codigoCurso",
+            "columnName": "codigoCurso",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codigoSeccion",
+            "columnName": "codigoSeccion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigoClase"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "curso",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigoCurso` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `descripcion` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "codigoCurso",
+            "columnName": "codigoCurso",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigoCurso"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "seccion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`codigoSeccion` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `descripcion` TEXT, `estado` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "codigoSeccion",
+            "columnName": "codigoSeccion",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "codigoSeccion"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3245ea5a1b291117a93156899400494b')"
+    ]
+  }
+}
