@@ -19,6 +19,8 @@ public class tb_Carrera {
     @ColumnInfo(name = "estado")
     private String estado_carrera;
 
+
+
     public tb_Carrera() {
     }
 

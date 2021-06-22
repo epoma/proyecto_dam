@@ -18,6 +18,8 @@ public class tb_Rol {
 
 
 
+
+
     public tb_Rol() {
     }
 
