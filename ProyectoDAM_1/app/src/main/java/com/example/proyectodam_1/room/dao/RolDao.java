@@ -12,8 +12,14 @@ import java.util.List;
 public interface RolDao {
 
     @Query("SELECT * FROM rol")
-    public List<Rol> getRoles();
+    public List<Rol> listarRoles();
 
     @Insert
-    public long insertRol(Rol rol);
+    public long insertarRol(Rol rol);
+
+    @Query("SELECT * FROM rol WHERE descripcion = :descripcion")
+    public Rol buscarRolPorDescripcion(String descripcion);
+
+    @Query("SELECT * FROM rol where codigoRol = :codigo")
+    public Rol buscarRolPorId(int codigo);
 }

@@ -6,7 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.proyectodam_1.room.dao.AsistenciaDao;
+import com.example.proyectodam_1.room.dao.ClaseDao;
+import com.example.proyectodam_1.room.dao.CursoDao;
 import com.example.proyectodam_1.room.dao.RolDao;
+import com.example.proyectodam_1.room.dao.SeccionDao;
 import com.example.proyectodam_1.room.entity.Asistencia;
 import com.example.proyectodam_1.room.entity.Carrera;
 import com.example.proyectodam_1.room.entity.Clase;
@@ -30,7 +34,6 @@ public abstract  class DBTronicTec extends RoomDatabase {
 
     private  static DBTronicTec INSTANCE;
 
-    public abstract RolDao getRolDao();
 
 
 
@@ -45,5 +48,16 @@ public abstract  class DBTronicTec extends RoomDatabase {
         return INSTANCE;
 
     }
+
+
+    public abstract RolDao getRolDao();
+
+    public abstract AsistenciaDao getAsistenciaDao();
+
+    public abstract CursoDao getCursoDao();
+
+    public abstract SeccionDao getSeccionDao();
+
+    public abstract ClaseDao getClaseDao();
 
 }

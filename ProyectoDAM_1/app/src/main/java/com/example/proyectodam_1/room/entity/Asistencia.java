@@ -21,6 +21,4 @@ public class Asistencia {
 
     @ColumnInfo(name="codigoClase")
     public int codigoClase;
-
-
 }
