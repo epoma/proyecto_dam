@@ -20,6 +20,9 @@ public class tb_Curso {
     @ColumnInfo(name="estadoCurso")
     public String estado_curso;
 
+    @ColumnInfo(name="idcarrera")
+    public long id_carrera;
+
     public tb_Curso() {
     }
 

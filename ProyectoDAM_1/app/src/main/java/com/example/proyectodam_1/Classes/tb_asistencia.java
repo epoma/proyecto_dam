@@ -19,6 +19,9 @@ public class tb_asistencia {
     @ColumnInfo(name="estado")
     public String estado_Asistencia;
 
+    @ColumnInfo(name="codUsuario")
+    public int cod_Usu_Asis;
+
     public tb_asistencia() {
     }
 
