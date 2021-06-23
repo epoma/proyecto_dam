@@ -3,6 +3,7 @@ package com.example.proyectodam_1.room.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "asistencia")
@@ -21,4 +22,11 @@ public class Asistencia {
 
     @ColumnInfo(name="codigoClase")
     public int codigoClase;
+
+    @Ignore
+    public Clase clase;
+
+    @Ignore
+    public Usuario alumno;
+
 }

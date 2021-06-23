@@ -3,6 +3,7 @@ package com.example.proyectodam_1.room.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "usuario")
@@ -31,4 +32,6 @@ public class Usuario {
     public String estado;
 
 
+    @Ignore
+    public Rol rol;
 }

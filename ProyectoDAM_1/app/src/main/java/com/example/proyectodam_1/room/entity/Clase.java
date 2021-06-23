@@ -3,6 +3,7 @@ package com.example.proyectodam_1.room.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "clase")
@@ -28,4 +29,12 @@ public class Clase {
     @ColumnInfo(name = "estado")
     public String estado;
 
+    @Ignore
+    public Usuario profesor;
+
+    @Ignore
+    public Seccion seccion;
+
+    @Ignore
+    public Curso curso;
 }
