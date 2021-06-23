@@ -1,6 +1,7 @@
 package com.example.proyectodam_1.room.util;
 
 import com.example.proyectodam_1.room.DBTronicTec;
+import com.example.proyectodam_1.room.dao.ClaseDao;
 import com.example.proyectodam_1.room.dao.CursoDao;
 import com.example.proyectodam_1.room.dao.RolDao;
 import com.example.proyectodam_1.room.dao.SeccionDao;
@@ -18,6 +19,7 @@ public class DBInitializer {
     private UsuarioDao usuarioDao;
     private CursoDao cursoDao;
     private SeccionDao seccionDao;
+    private ClaseDao claseDao;
 
     public DBInitializer(DBTronicTec db) {
         this.db = db;
@@ -25,6 +27,7 @@ public class DBInitializer {
         usuarioDao = this.db.getUsuarioDao();
         cursoDao = this.db.getCursoDao();
         seccionDao = this.db.getSeccionDao();
+        this.claseDao = this.db.getClaseDao();
     }
 
     public void init() {
@@ -34,6 +37,7 @@ public class DBInitializer {
         crearProfesor();
         crearCursos();
         crearSecciones();
+        crearClases();
     }
 
 
@@ -119,6 +123,35 @@ public class DBInitializer {
     }
 
     private void crearClases(){
-        
+        Clase claseTardeWeb = new Clase();
+
+        Usuario profesor = usuarioDao.buscarUsuarioPorNombre("Jane");
+        claseTardeWeb.codigoProfesor = profesor.codigoUsuario;
+
+        Curso cursoWeb = cursoDao.buscarCursoPorDescripcion("Aplicaciones Web 2");
+        claseTardeWeb.codigoCurso = cursoWeb.codigoCurso;
+
+        Seccion seccionTarde = seccionDao.buscarSeccionPorDescripcion("T6AB");
+        claseTardeWeb.codigoSeccion = seccionTarde.codigoSeccion;
+
+        claseTardeWeb.estado = "activo";
+        claseTardeWeb.hora = "4:30 pm";
+
+        claseDao.insertarClase(claseTardeWeb);
+
+        Clase claseNoche = new Clase();
+
+        claseNoche.codigoProfesor = profesor.codigoUsuario;
+
+        Curso cursoMovil = cursoDao.buscarCursoPorDescripcion("Aplicaciones móviles 1");
+        claseNoche.codigoCurso = cursoMovil.codigoCurso;
+
+        Seccion seccionNoche = seccionDao.buscarSeccionPorDescripcion("T6CB");
+        claseNoche.codigoSeccion = seccionNoche.codigoSeccion;
+
+        claseNoche.hora = "8:00 pm";
+        claseNoche.estado = "activo";
+
+        claseDao.insertarClase(claseNoche);
     }
 }

@@ -17,4 +17,5 @@ public interface ClaseDao {
     @Insert
     public long insertarClase(Clase clase);
 
+
 }

@@ -16,4 +16,8 @@ public interface CursoDao {
 
     @Query("SELECT * FROM curso")
     public List<Curso> listarCurso();
+
+    @Query("SELECT * FROM curso WHERE descripcion = :descripcion")
+    public Curso buscarCursoPorDescripcion(String descripcion);
+
 }

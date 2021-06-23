@@ -30,7 +30,7 @@ import com.example.proyectodam_1.room.entity.Usuario;
             Curso.class,
             Seccion.class
         },
-        version = 6)
+        version = 9)
 public abstract  class DBTronicTec extends RoomDatabase {
 
     private  static DBTronicTec INSTANCE;

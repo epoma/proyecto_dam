@@ -27,4 +27,6 @@ public interface UsuarioDao {
     @Query("UPDATE usuario SET estado = 'inactivo' where codigoUsuario = :codigoUsuario")
     public void eliminarUsuario(int codigoUsuario);
 
+    @Query("SELECT * FROM usuario WHERE nombre = :nombre")
+    public Usuario buscarUsuarioPorNombre(String nombre);
 }

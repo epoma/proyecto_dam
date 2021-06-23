@@ -17,4 +17,6 @@ public interface SeccionDao {
     @Query("SELECT * FROM seccion")
     public List<Seccion> listarSeccion();
 
+    @Query("SELECT * FROM seccion WHERE descripcion = :descripcion")
+    public Seccion buscarSeccionPorDescripcion(String descripcion);
 }
