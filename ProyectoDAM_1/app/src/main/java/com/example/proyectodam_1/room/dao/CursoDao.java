@@ -20,4 +20,8 @@ public interface CursoDao {
     @Query("SELECT * FROM curso WHERE descripcion = :descripcion")
     public Curso buscarCursoPorDescripcion(String descripcion);
 
+    @Query("SELECT * FROM curso WHERE codigoCurso = :codigoCurso")
+    public Curso buscarCursoPorCodigo(int codigoCurso);
+
+
 }

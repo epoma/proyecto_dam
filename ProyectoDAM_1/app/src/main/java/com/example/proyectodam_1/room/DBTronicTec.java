@@ -6,6 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.example.proyectodam_1.room.dao.AlumnoClaseDao;
 import com.example.proyectodam_1.room.dao.AsistenciaDao;
 import com.example.proyectodam_1.room.dao.ClaseDao;
 import com.example.proyectodam_1.room.dao.CursoDao;
@@ -62,4 +63,6 @@ public abstract  class DBTronicTec extends RoomDatabase {
     public abstract ClaseDao getClaseDao();
 
     public abstract UsuarioDao getUsuarioDao();
+
+    public abstract AlumnoClaseDao getAlumnoClaseDao();
 }

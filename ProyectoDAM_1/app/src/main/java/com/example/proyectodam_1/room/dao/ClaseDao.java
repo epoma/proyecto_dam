@@ -17,5 +17,6 @@ public interface ClaseDao {
     @Insert
     public long insertarClase(Clase clase);
 
-
+    @Query("SELECT * FROM clase WHERE codigoClase IN (:codigosClases)")
+    public List<Clase> listarClasesPorCodigos(List<Integer> codigosClases);
 }
