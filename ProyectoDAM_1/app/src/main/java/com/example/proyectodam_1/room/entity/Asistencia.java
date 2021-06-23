@@ -23,6 +23,9 @@ public class Asistencia {
     @ColumnInfo(name="codigoClase")
     public int codigoClase;
 
+    @ColumnInfo(name = "horaAsistencia")
+    public String horaAsistencia;
+
     @Ignore
     public Clase clase;
 

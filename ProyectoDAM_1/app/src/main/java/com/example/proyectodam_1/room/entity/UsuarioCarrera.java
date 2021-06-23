@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 
-@Entity(primaryKeys = {"codigoCarrera", "codigoUsuario"})
+@Entity(primaryKeys = {"codigoCarrera", "codigoUsuario"}, tableName = "usuariocarrera")
 public class UsuarioCarrera {
 
     @ColumnInfo(name = "codigoCarrera")

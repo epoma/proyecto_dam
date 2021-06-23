@@ -135,7 +135,7 @@ public class DBInitializer {
         claseTardeWeb.codigoSeccion = seccionTarde.codigoSeccion;
 
         claseTardeWeb.estado = "activo";
-        claseTardeWeb.hora = "4:30 pm";
+        claseTardeWeb.horaInicio = "4:30 pm";
 
         claseDao.insertarClase(claseTardeWeb);
 
@@ -149,7 +149,7 @@ public class DBInitializer {
         Seccion seccionNoche = seccionDao.buscarSeccionPorDescripcion("T6CB");
         claseNoche.codigoSeccion = seccionNoche.codigoSeccion;
 
-        claseNoche.hora = "8:00 pm";
+        claseNoche.horaInicio = "8:00 pm";
         claseNoche.estado = "activo";
 
         claseDao.insertarClase(claseNoche);

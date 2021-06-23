@@ -17,8 +17,11 @@ public class Clase {
     @ColumnInfo(name = "codigoProfesor")
     public int codigoProfesor;
 
-    @ColumnInfo(name = "hora")
-    public String hora;
+    @ColumnInfo(name = "horaInicio")
+    public String horaInicio;
+
+    @ColumnInfo(name = "horaFin")
+    public String horaFin;
 
     @ColumnInfo(name = "codigoCurso")
     public int codigoCurso;
