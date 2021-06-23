@@ -52,6 +52,6 @@ public class ClaseService {
 
         clases = claseDao.listarClasesPorCodigos(codigosClases);
 
-        return clases;
+        return rellenarClasesConDependencias(clases);
     }
 }
