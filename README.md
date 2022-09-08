@@ -3,7 +3,7 @@
 Proyecto desarrollo de aplicaciones móviles 1
 
 Integrantes:
-* Edgar Daniel Poma Huaman
+* Edgar Poma
 * Hernan Junior Cardenas Breña
 * Leonardo Antonio Celestino Puchoc
 * Omar Jesus Reyna Reina
